@@ -1,7 +1,7 @@
 # recommendation-system
 A recommendation system developed for the GfK NextGen Data Science Hackathon that relies on predictive analytics to suggest products to ecommerce shoppers, based on their purchase histories and personal characteristics
 
-## A recommendation service that suggest the most relevant brands to 4 million customers based on their purchase history of 112 different cereal brands.
+## A recommendation service that suggest the most relevant brands to customers based on their purchase history of different cereal brands.
 ### Input
 `hhid`
 ### Output
@@ -40,7 +40,7 @@ User preferences and liking may also change over time so an item-to-item approac
     - We use the items (already rated by the user) that are most similar to the missing item to generate rating. Specifically, we try to generate predictions based on the ratings of similar products.
     - We use a formula which computes the rating for a particular item using weighted sum of the ratings of the other similar products
 
-## A recommendation system for Products based on user’s characteristics
+## A recommendation system that predict a user's preference of products based on that user’s characteristics
 ### Input
 `Age`, `Gender`, and `Race` of customer
 
@@ -69,5 +69,5 @@ List of categories:
 - Apply Bayes' Theorem to predict the likelihood a user of given Gender, Age, and Race would buy a product.
 
 ### Steps:
-We can represent each row as **Pr[A], Pr[B], or Pr[C]** with A, B, and C being the **Gender, Age, and Race** of a customer, and **Pr[H]** with H being a particular product.
-We present the probability as User with given traits A, B, and C would buy a product H as **Pr[H | A, B, C]**
+- We can represent each row as **Pr[A], Pr[B], or Pr[C]** with A, B, and C being the **Gender, Age, and Race** of a customer, and **Pr[H]** with H being a particular product.
+- We calculate the probability a user with given traits A, B, and C would buy the product H as **Pr[H | A, B, C]**
