@@ -6,7 +6,7 @@ A recommendation system developed for the GfK NextGen Data Science Hackathon tha
 `hhid`
 ### Output
 `ranked list of cereal brands that the user most likely want to put in his/her basket`
-### Steps:
+### Process:
 - Clean and prepare the data for summary of cereal purchases from 01/01/2019 to 12/31/2021 with 14 million records
 - Apply Item Based Collaborative Filtering Model to predict user's preference of cereal products they have never purchased and recommend the 5 most relevant brands.
 
@@ -29,11 +29,7 @@ User preferences and liking may also change over time so an item-to-item approac
 
 ### Steps:
 1. Create an item-to-item similarity matrix. This is used to measure how similar a product is to another product. We choose `cosine` similarity as our main method.
-     - To compare item A and B, we look at all customers who have rated both these items. We create two item-vectors, v1 for item X, and v2 for item Y, and find the `cosine` angle/distance between these vectors. 
-     - The similarity is defined by the following formula:
-
-        + **similarity(A, B)** = $cos(\vec{A},\vec{B}) = \frac{\vec{A}.\vec{B}}{||\vec{A}||.||\vec{B}||} = \frac{\sum_u freq_{u, A}.freq_{u, B}}{\sqrt{\sum_u freq^2_{u,A}}\sqrt{\sum_u freq^2_{u, B}}}$
-
+    - To compare item A and B, we look at all customers who have rated both these items. We create two item-vectors, v1 for item X, and v2 for item Y, and find the `cosine` angle/distance between these vectors. 
     - As the vectors get closer, the angle will be smaller and the `cosine` will be larger.
     - Cosine similarity gives value between -1 and 1
         - Close to 1: Two items are strongly similar to each other
@@ -43,5 +39,35 @@ User preferences and liking may also change over time so an item-to-item approac
 2. Calculating the prediction of a user u for item i
     - We use the items (already rated by the user) that are most similar to the missing item to generate rating. Specifically, we try to generate predictions based on the ratings of similar products.
     - We use a formula which computes the rating for a particular item using weighted sum of the ratings of the other similar products
-    
-        + **prediction(u, i)** = $\frac{\sum_j (freq_{u, j}).similarity_{i,j}}{\sum_j similarity_{i,j}}$
+
+## A recommendation system for Products based on user’s characteristics
+### Input
+`Age`, `Gender`, and `Race` of customer
+
+### Output
+The probability distribution of different categories that the customer would likely to buy
+List of categories:
+- `Household washing and cleaning products`
+- `Haircare products`
+- `Skincare products`
+- `Make-up, cosmetics or fragrances`
+- `Packaged food and beverages (e.g. groceries, snacks)`
+- `Clothing/fashion (e.g. items related to apparel, footwear, or personal accessories)`
+- `Smartphones, mobile phones`
+- `Small home appliances (e.g. coffee makers, toasters, mixers, blenders, vacuum cleaners, irons)`
+- `Major home appliances (e.g. refrigerators, washers & dryers, ovens, dishwashers)`
+- `Wearables (e.g. fitness trackers, smart watches)`
+- `Computing (e.g. desktop, laptop, notebook, tablet, PCs)`
+- `Toys`
+- `OTC healthcare (e.g. analgesics, cough/cold, allergy, nutritional supplements, bought without a prescription)`
+- `Replacement auto or truck tires`
+- `Home furnishings and accessories`
+- `TV`
+
+### Process:
+- Clean and prepare the data for demographic on how items are shopped for in past 6 months (W21,20,19).
+- Apply Bayes' Theorem to predict the likelihood a user of given Gender, Age, and Race would buy a product.
+
+### Steps:
+We can represent each row as **Pr[A], Pr[B], or Pr[C]** with A, B, and C being the **Gender, Age, and Race** of a customer, and **Pr[H]** with H being a particular product.
+We present the probability as User with given traits A, B, and C would buy a product H as **Pr[H | A, B, C]**
