@@ -3,12 +3,12 @@
 relies on predictive analytics to suggest products to ecommerce shoppers, based on their purchase histories and personal characteristics
 - The presentation on this product can be viewed at [Slides](https://docs.google.com/presentation/d/1fV6T4zIwfkVzCLKraK0fWkAPJSzCXeoEV18hs4MF5cY/edit?usp=sharing)
 
-## A recommendation service that suggest the most relevant brands to customers based on their purchase history of different cereal brands.
-### Input
+# A recommendation service that suggest the most relevant brands to customers based on their purchase history of different cereal brands.
+## Input
 `hhid`
-### Output
+## Output
 `ranked list of cereal brands that the user most likely want to put in his/her basket`
-### Process:
+## Process:
 - Clean and prepare the data for summary of cereal purchases from 01/01/2019 to 12/31/2021 with 14 million records
 - Apply Item Based Collaborative Filtering Model to predict user's preference of cereal products they have never purchased and recommend the 5 most relevant brands.
 
@@ -42,11 +42,11 @@ relies on predictive analytics to suggest products to ecommerce shoppers, based 
     - We use the items (already rated by the user) that are most similar to the missing item to generate rating. Specifically, we try to generate predictions based on the ratings of similar products.
     - We use a formula which computes the rating for a particular item using weighted sum of the ratings of the other similar products
 
-## A recommendation system that predict a user's preference of products based on that user’s characteristics
-### Input
+# A recommendation system that predict a user's preference of products based on that user’s characteristics
+## Input
 `Age`, `Gender`, and `Race` of customer
 
-### Output
+## Output
 The probability distribution of different categories that the customer would likely to buy
 List of categories:
 - `Household washing and cleaning products`
@@ -66,10 +66,10 @@ List of categories:
 - `Home furnishings and accessories`
 - `TV`
 
-### Process:
+## Process:
 - Clean and prepare the data for demographic on how items are shopped for in past 6 months (W21,20,19).
 - Apply Bayes' Theorem to predict the likelihood a user of given Gender, Age, and Race would buy a product.
 
-### Steps:
+## Steps:
 - We can represent each row as **Pr[A], Pr[B], or Pr[C]** with A, B, and C being the **Gender, Age, and Race** of a customer, and **Pr[H]** with H being a particular product.
 - We calculate the probability a user with given traits A, B, and C would buy the product H as **Pr[H | A, B, C]**
