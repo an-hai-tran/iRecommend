@@ -1,6 +1,7 @@
 # recommendation-system
 - A recommendation system developed for the GfK NextGen Data Science Hackathon that relies on predictive analytics to suggest products to ecommerce shoppers, based on their purchase histories and personal characteristics
 - The presentation on this product can be viewed at [Slides](https://docs.google.com/presentation/d/1fV6T4zIwfkVzCLKraK0fWkAPJSzCXeoEV18hs4MF5cY/edit?usp=sharing)
+- The product wins First Prize in the [GfK NextGen Data Science Hackathon](https://github.com/an-hai-tran/recommendation-system)
 
 ## A recommendation service that suggest the most relevant brands to customers based on their purchase history of different cereal brands.
 ### Input
