@@ -1,5 +1,5 @@
 # Background of the product
-- A **Recommendation Service** called *iRecommend* that won First Prize in [GfK NextGen Data Science Hackathon](https://github.com/an-hai-tran/recommendation-system). It
+- A **Recommendation Service** called *iRecommend* that won First Prize in [GfK NextGen Data Science Hackathon](https://www.gfk.com/press/hackathon-student-data-science). It
 relies on predictive analytics to suggest products to ecommerce shoppers, based on their purchase histories and personal characteristics
 - The presentation on this product can be viewed at [Slides](https://docs.google.com/presentation/d/1fV6T4zIwfkVzCLKraK0fWkAPJSzCXeoEV18hs4MF5cY/edit?usp=sharing)
 
